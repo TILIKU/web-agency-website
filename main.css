@@ -5,6 +5,7 @@
     --red: #881600;
     --white: #EDF7F6;
     --grey:#343d46;
+    --skin:#DFD2B8;
 }
 
 *{
@@ -35,6 +36,7 @@ nav ul{
 }
 
 nav ul li a{
+    font-weight: 800;
     text-decoration: none;
     display: block;
     text-align: center;
@@ -43,7 +45,6 @@ nav ul li a{
     color: var(--orange);
 }
 nav ul li a:hover{
-    /* font-weight: 800; */
     color: var(--white)
 }
 
@@ -55,6 +56,9 @@ nav ul li a:hover{
     background: var(--orange);
     color: var(--black);
     font-style: italic;
+}
+.logo .fa{
+    display: none;
 }
 #logo{
     width:100%;
@@ -84,7 +88,10 @@ nav ul li a:hover{
     }
     nav ul li{
         text-align:center;
-      }
+    }
+    .logo .fa{
+        display: block;
+    }
 
 }
 @media screen and (max-width:300px){
@@ -94,3 +101,116 @@ nav ul li a:hover{
 
 }
 /* nav-bar-end */
+
+/* main banner */
+
+#banner{
+    min-height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+    url(https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner-text{
+    font-size: 50px;
+    text-transform: uppercase;
+    color: var(--white);
+    text-align: center;
+}
+.banner-underline{
+    width: 200px;
+    border: 3px solid var(--blue);
+    margin: 10px auto 20px auto;
+}
+
+.banner-btn{
+    display: flex;
+    justify-content: space-between;
+}
+.banner-btn button{
+    font-size: 30px;
+    padding: 15px;
+    text-transform: uppercase;
+    margin: 0 10px;
+    background: rgba(52, 61, 70,0.5);
+    color: var(--orange);
+    border: 2px solid var(--orange)
+}
+.banner-btn button:hover{
+    color: var(--white);
+    background-color: var(--orange);
+}
+.banner-btn button:active{
+    color: var(--white);
+    background-color: var(--red);
+}
+/* end of banner */
+/* skills go brrrrrrrrr */
+
+#skills{
+    padding: 60px 0;
+    background-color: var(--skin);
+}
+
+.skills-container{
+    max-width: 95vw;
+    margin: 0 auto;
+}
+.skills-item{
+    text-align: center;
+    margin: 20px 0;
+}
+.skills-items .fa{
+    font-size: 60px;
+    color:var(--black);
+}
+.skills-item h1{
+    font-size: 30px;
+    letter-spacing: 2px;
+    margin:30px 0;
+    color: var(--orange);
+    text-transform: uppercase;
+}
+.skills-item p{
+    width: 75%;
+    margin: 0 auto;
+    color: var(--white);
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 1em ;
+}
+@media screen and (max-width:700px){
+    .skills-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 5px ;
+    }
+
+}
+@media screen and (max-width:500px){
+    .skills-container {
+        display: grid;
+        grid-template-columns:1fr;
+        grid-column-gap: 1em ;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+/* skills end */

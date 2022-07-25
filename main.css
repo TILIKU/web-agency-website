@@ -179,7 +179,7 @@ nav ul li a:hover{
 .skills-item p{
     width: 75%;
     margin: 0 auto;
-    color: var(--white);
+    color: var(--black);
 }
 
 .skills-container {
@@ -203,14 +203,207 @@ nav ul li a:hover{
     }
     
 }
-
-
-
-
-
-
-
-
-
-
 /* skills end */
+/* services  */
+/* title */
+.title{
+    margin: 40px 0;
+}
+.title-text{
+    text-align: center;
+    font-size: 40px;
+    color: var(--white);
+    font-style: italic;
+    text-transform: uppercase;
+}
+.title-underline{
+    width: 200px;
+    border: 3px solid var(--blue);
+    margin:0 auto;
+    background-color: var(--blue);
+}
+/* title end */
+
+#services{
+    min-height: 100vh;
+    background:url(photos/mountains.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 20px 0 80px 0;
+}
+.services-container{
+    max-width: 90vw;
+    margin: 0 auto;
+    color: var(--white);
+}
+
+.service-item{
+    overflow: hidden;
+    position: relative;
+    padding: 60px;
+
+}
+.service-item .fa{
+    font-size: 60px;
+    margin-bottom: 30px;
+    color: var(--orange);
+}
+.service-item-black{
+    background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
+}
+.service-item-white{
+    color:var(--black);
+    background:linear-gradient(rgba(206,208,206,0.6),rgba(206,208,206,0.6));
+}
+
+.front-text{
+    text-align: center;
+    transition: transform 2s;
+}
+.back-text{
+    position: absolute;
+    bottom: -15em;
+    width: 75%;
+    margin: 0 auto;
+    height: 100%;
+    transition: bottom 2s;
+    padding: 30px 0;
+}
+
+.back-text h1{
+    margin-bottom: 20px;
+}
+.back-text button{
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: transparent;
+    border: 2px solid var(--orange);
+    font-size: 20px;
+    color: var(--orange);
+}
+.back-text button:hover{
+    background-color: var(--orange);
+    color:var(--white);
+}
+.back-text button:active{
+    background-color: var(--red);
+    color:var(--white);
+}
+.service-item-white button{
+    background: transparent;
+    color: var(--black);
+}
+
+.service-item:hover .front-text{
+    transform: translateY(-200px);
+}
+.service-item:hover .back-text{
+    bottom: 0;
+}
+
+@media screen and (min-width:776px){
+    .services-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .services-container .service-item:nth-of-type(1){
+        order: 1;
+    }
+    .services-container .service-item:nth-of-type(2){
+        order: 2;
+    }
+    .services-container .service-item:nth-of-type(3){
+        order: 4;
+    }
+    .services-container .service-item:nth-of-type(4){
+        order: 3;
+    }
+}
+/* services end */
+
+/* projects */
+/* projects title */
+#projects .title-text{
+    color: var(--black);
+}
+/* p title end */
+#projects{
+    padding: 20px 0 80px 0;
+    background-color: var(--skin);
+}
+
+.projects-container{
+    max-width: 90vw;
+    margin:0 auto;
+}
+.projects-item{
+    position: relative;
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8));
+    color: var(--white);
+    overflow: hidden;
+    margin: 20px 0;
+}
+#projects img{
+    width: 100%;
+    min-height: 100%;
+    display: block;
+    transition: transform 4s;
+}
+.img-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align:center;
+    opacity: 0;
+    transition: opacity 4s;
+}
+.img-footer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+    font-size: 20px;
+    opacity: 0;
+    color: var(--white);
+    transition: opacity 4s;
+}
+.img-text h1{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.img-text h6{
+    font-size: 15px;
+}
+.projects-item:hover img{
+    opacity:0.4;
+    transform: scale(1.2);
+}
+.projects-item:hover .img-text,
+.projects-item:hover .img-footer{
+    opacity:1;
+
+}
+@media screen and (min-width:576px){
+    .projects-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 1em;
+    }
+}
+@media screen and (min-width:992px){
+    .projects-container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 1em;
+    }
+}
+
+
+
+/* projects end */

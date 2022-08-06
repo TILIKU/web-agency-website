@@ -4,4 +4,4 @@ hope it wont be so hot that ill have to evacuate this rock
 
 
 hosted:
-https://restaurant-tiliku.netlify.app/
+https://web-agency-tiliku.netlify.app/
